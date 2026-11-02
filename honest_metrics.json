@@ -1,0 +1,42 @@
+{
+  "runs": [
+    {
+      "setup": "Baseline: always predict the median ratio",
+      "features": "none",
+      "split": "time (future years)",
+      "mae_ratio": 0.15691009602568154,
+      "mae_dollars": 6511.305968869496,
+      "r2": -0.15061756220377132
+    },
+    {
+      "setup": "Baseline: policy math (damage - deductible, capped at coverage)",
+      "features": "3 columns",
+      "split": "time (future years)",
+      "mae_ratio": 0.0524821942188573,
+      "mae_dollars": 2336.4937046729233,
+      "r2": 0.6486970754921839
+    },
+    {
+      "setup": "Honest features, random split",
+      "features": "pre-decision only",
+      "split": "random rows",
+      "mae_ratio": 0.055073675221322074,
+      "mae_dollars": 2562.7921467159363,
+      "r2": 0.8080319936545441
+    },
+    {
+      "setup": "Honest features, time split (the real number)",
+      "features": "pre-decision only",
+      "split": "time (future years)",
+      "mae_ratio": 0.07862723543767919,
+      "mae_dollars": 4105.2727209156,
+      "r2": 0.6464591211914605
+    }
+  ],
+  "classifier": {
+    "auc": 0.9554207869479219,
+    "share_paid_in_test": 0.9473898252339291
+  },
+  "n_train_time_split": 1065268,
+  "n_test_time_split": 282778
+}

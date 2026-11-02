@@ -1,0 +1,10 @@
+{
+  "setup": "Naive: leaky features, random split",
+  "features": "all + payout-derived",
+  "split": "random rows",
+  "n_train": 1078436,
+  "n_test": 269610,
+  "mae_ratio": 0.010215624008754538,
+  "mae_dollars": 634.0840609176812,
+  "r2": 0.992645458658098
+}

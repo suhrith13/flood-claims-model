@@ -1,0 +1,6 @@
+setup,features,split,mae_ratio,mae_dollars,r2
+Baseline: always predict the median ratio,none,time (future years),0.15691009602568154,6511.305968869496,-0.15061756220377132
+"Baseline: policy math (damage - deductible, capped at coverage)",3 columns,time (future years),0.0524821942188573,2336.4937046729233,0.6486970754921839
+"Naive: leaky features, random split",all + payout-derived,random rows,0.010215624008754538,634.0840609176812,0.992645458658098
+"Honest features, random split",pre-decision only,random rows,0.055073675221322074,2562.7921467159363,0.8080319936545441
+"Honest features, time split (the real number)",pre-decision only,time (future years),0.07862723543767919,4105.2727209156,0.6464591211914605
